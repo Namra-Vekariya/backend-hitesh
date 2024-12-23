@@ -3,8 +3,8 @@ import dotenv from "dotenv";
 import mongoose from "mongoose";
 import { DB_NAME } from "../constants.js";
 
-console.log("DB_NAME:", DB_NAME); // From constants.js
-console.log("MONGODB_URI:", process.env.MONGODB_URI); // From .env
+// console.log("DB_NAME:", DB_NAME); // From constants.js
+// console.log("MONGODB_URI:", process.env.MONGODB_URI); // From .env
 
 const connectDB = async () => {
   try {
