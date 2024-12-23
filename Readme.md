@@ -13,3 +13,4 @@ create asynchandler then api error and then api response
 makes structure of all the fields and it's relation
 make models
 mongoose aggregation use for complex data using strong query, bcrypt used for hashing and jwt for token
+cloudinary ,fist store data in local server then server send data to cloudinary after uploading cloudinary remove from server(miscellineous file , unlinkSync = (delete))

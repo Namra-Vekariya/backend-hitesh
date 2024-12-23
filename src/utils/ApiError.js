@@ -3,7 +3,7 @@ class ApiError extends Error {
     statuscode,
     message = " Something went wrong",
     errors = [],
-    statck = ""
+    stack = ""
   ) {
     super(message);
     this.statuscode = statuscode;
@@ -13,8 +13,8 @@ class ApiError extends Error {
     this.errors = errors;
 
     // use to find error in perticuler file ,remove in production
-    if (statck) {
-      this.statck = statck;
+    if (stack) {
+      this.stack = stack;
     } else {
       Error.captureStackTrace(this, this.constructor);
     }
