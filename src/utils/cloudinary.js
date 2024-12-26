@@ -4,11 +4,11 @@ import fs from "fs";
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLODINARY.API.SECRET,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
 //can upload video ,audio ,image ,pdf
-const uploadCloudinary = async (localFilePath) => {
+const uploadOnCloudinary = async (localFilePath) => {
   try {
     if (!localFilePath) return null;
     // upload file in cloudinary
@@ -24,14 +24,4 @@ const uploadCloudinary = async (localFilePath) => {
   }
 };
 
-cloudinary.v2.uploader.upload(
-  "https://res.cloudinary.com/demo/image/upload/getting-started/shoes.jpg",
-  {
-    public_id: "shoes",
-  },
-  function (error, result) {
-    console.log(result);
-  }
-);
-
-console.log(uploadResult);
+export { uploadOnCloudinary };

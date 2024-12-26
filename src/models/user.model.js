@@ -34,7 +34,7 @@ const userSchema = new Schema(
       type: String, //cloudinary URL
     },
     watchHistory: {
-      type: Schema.type.objectId,
+      type: Schema.Types.ObjectId,
       ref: "video",
     },
     password: {
@@ -87,7 +87,5 @@ userSchema.methods.generateRefreshToken = function () {
     }
   );
 };
-
-userSchema.methods.generateRefreshToken = function () {};
 
 export const User = mongoose.model("User", userSchema);
